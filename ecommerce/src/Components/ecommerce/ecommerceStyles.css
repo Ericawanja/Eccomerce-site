@@ -1,0 +1,48 @@
+.mainWrapper {
+  width: 600px;
+  min-height: 100vh;
+  margin: auto;
+  background-color: azure;
+  box-sizing: border-box;
+ 
+}
+
+header {
+  background-color: rgb(209, 87, 1);
+  padding: 10px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  align-items: center;
+}
+.cartValue {
+  color: aliceblue;
+  font-size: 1.8rem;
+}
+
+.productsGrid {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 15px;
+  gap: 15px;
+}
+
+.product{
+    background: rgb(246, 246, 246);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    width: 160px;
+    height: 160px;
+}
+.product img {
+  width: 100px;
+  height: 100px;
+}
+.actionButtons{
+  display: flex;
+  gap:10px
+}
