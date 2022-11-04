@@ -2,9 +2,9 @@ import React, { useContext } from "react";
 import { ProductsContext } from "./Main_eco";
 function Display() {
   let { state, dispatch } = useContext(ProductsContext);
-  let { products, addCart, removeCart } = state;
+  let { products, addCart, removeCart, reduceQuantity } = state;
 
-  console.log(state);
+  //console.log(state);
 
   return (
     <div className="productsGrid">
@@ -21,13 +21,13 @@ function Display() {
             {quantity<=0 ?
             <span className="actionButtons">
               <button onClick={() => addCart(id)}>Add</button>
-              <button onClick={() => removeCart(id)}>Remove</button>
+              {/* <button onClick={() => removeCart(id)}>Remove</button> */}
             </span>
             :
             <span className="actionButtons">
             <button onClick={() => addCart(id)}>+</button>
             <span>{quantity}</span>
-            <button onClick={() => removeCart(id)}> -</button>
+            <button onClick={() => reduceQuantity(id)}> -</button>
           </span>
             }
           </div>

@@ -6,16 +6,16 @@ import { ProductsContext } from './Main_eco'
 function Cart() {
     let {state}= useContext(ProductsContext)
     //console.log(state);
-    let {cart}= state
+    let {cart_size, cart}= state
   return (
     <header>
-        <span>
+        <span onClick={()=> console.log(cart)}>
             <IconContext.Provider value={{size:'30px', color:'white'}}>
                 <AiOutlineShoppingCart/>
             </IconContext.Provider>
 
         </span>
-        <span className='cartValue'>{cart.length}</span>
+        <span className='cartValue'>{cart_size}</span>
     </header>
   )
 }
